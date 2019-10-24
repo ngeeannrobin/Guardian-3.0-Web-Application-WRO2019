@@ -1,0 +1,94 @@
+.message{
+    background-color: #1CFFE4;
+    color: #F306E8;
+    border: 10px solid #BB41A6;
+    width: 100%;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 2em;
+    width: 80%;
+    display: inline-block;
+}
+
+.messageContainer{
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%)
+}
+
+.submessage{
+    font-size: 2em;
+    text-align: center;
+}
+
+.learnmoremessage{
+    /* font-size: 1em; */
+}
+
+
+
+
+.botRight{
+    position: absolute;
+    bottom: 10vh;
+    right: 2vh;
+    
+}
+
+.btn{
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background-color: #00FFDF;
+    border: 10px solid #BE3FA6;
+    
+    display: inline-block;
+
+    position: relative;
+}
+
+h1.btnContent{
+    margin: 0;
+}
+
+p.btnContent{
+    padding-left: 5%;
+    padding-right: 5%;
+    
+    font-size: 0.5em;
+    font-weight: bold;
+
+}
+
+.btnMargin{
+    margin-left: 10%;
+}
+
+.btnInner{
+    color: #F10CE1;
+    width: 100%;
+    font-size: 2em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.btnInner2{
+    top: 50%;
+    transform: translate(-50%,25%);
+}
+
+/* .btn:hover{
+    position: relative;
+    left: 0.75em;
+    top: 0.25em;
+    box-shadow: 0em 0em ;
+} */
+
+.buttons{
+    width: auto;
+    text-align: center;
+}

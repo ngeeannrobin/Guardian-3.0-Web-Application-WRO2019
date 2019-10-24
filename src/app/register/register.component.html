@@ -1,0 +1,20 @@
+<div class="reg">
+    <h5 class="reglabel">Register</h5>
+    <div class="formstyle">
+      <div>
+        <mat-form-field class="txtBox">
+          <input matInput placeholder="Username" type="text" [(ngModel)]="username">
+        </mat-form-field>
+        <mat-form-field class="txtBox">
+          <input matInput placeholder="Email" type="text" [(ngModel)]="email">
+        </mat-form-field>
+        <mat-form-field class="txtBox">
+          <input matInput placeholder="Password" type="password" [(ngModel)]="password">
+        </mat-form-field>
+
+        <i>{{message}}</i>
+      </div>
+      <button mat-raised-button class="btnreg" (click)="register()">Register</button>
+      
+    </div>
+  </div>

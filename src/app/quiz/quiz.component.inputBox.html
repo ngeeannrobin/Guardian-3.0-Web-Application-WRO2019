@@ -1,0 +1,18 @@
+<h1 mat-dialog-title (click)="npr()">{{title}}</h1>
+<div mat-dialog-content style="position: relative">
+    <div class="fullWidth" id="fullWidth"></div>
+    <mat-form-field style="width:100%" *ngIf="mode=='username'">
+        <input matInput [(ngModel)]="username" placeholder="Username" type="text">
+    </mat-form-field>
+    <div class="qrcontainer">
+        <qr-code [value]="link" [size]="size" class="qrCodeInner" *ngIf="mode=='register'"></qr-code>
+    </div>
+    <a (click)="switch()">{{switchText}}</a>
+    <div class="botRight2" >
+        <button mat-stroked-button (click)="OK()" >OK</button>
+    </div>
+    <div class="msgBox">
+        <i>{{message}}</i>
+    </div>
+    
+</div>

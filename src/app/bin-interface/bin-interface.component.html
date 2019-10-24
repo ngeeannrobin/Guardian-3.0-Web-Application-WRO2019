@@ -1,0 +1,62 @@
+<div class="messageContainer">
+  <div class="message" *ngIf="material==null">
+    <h1>{{message}}</h1>
+  </div>
+</div>
+<div *ngIf="material!=null && randomQuestion==null" class="submessage">
+  <h1>{{message}}</h1>
+</div>
+<div *ngIf="randomQuestion!=null" class="learnmoremessage">
+  <h1>{{message}}</h1>
+</div>
+
+<div class="botRight" *ngIf="material==null">
+  <br/>
+  <mat-button-toggle-group [(ngModel)]="material" (change)="startInteraction()" *ngIf="false">
+      <mat-button-toggle value="Plastic">
+        Plastic
+      </mat-button-toggle>
+      <!-- <mat-button-toggle value="Paper">
+        Paper
+      </mat-button-toggle>
+      <mat-button-toggle value="Glass">
+        Glass
+      </mat-button-toggle> -->
+      <mat-button-toggle value="Metal">
+        Metal
+      </mat-button-toggle>
+    </mat-button-toggle-group>
+    <br>
+</div>
+<div *ngIf="material!=null">
+  <div *ngIf="mode==null" class="buttons">
+
+    <div class="btn" (click)="learnMore()">
+      <div class="btnInner">
+        <h1 class="btnContent">Learn more</h1>
+        
+      </div>
+      <div class="btnInner btnInner2">
+          <p class="btnContent">Find out what this item is made of and equip yourself with a quick fun fact!</p>
+      </div>
+    </div>
+    <div class="btn btnMargin" (click)="takeQuiz()">
+      <div class="btnInner">
+        <h1 class="btnContent">Take Quiz</h1>
+      </div>
+      <div class="btnInner btnInner2">
+          <p class="btnContent">Challenge yourself and win prizes along the way! How much do you know about this item?</p>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="mode=='learn'">
+    <app-more-info [question]=this.randomQuestion></app-more-info>
+    
+  </div>
+  <div *ngIf="mode=='quiz'">
+    <app-quiz [questions]="this.questions" [material]="material" (closeQuizEmitter)="completeQuiz($event)"></app-quiz>
+  </div>
+  <div *ngIf="mode!=null && mode!='quiz'" class="botRight">
+      <button mat-raised-button (click)="end()">Continue</button>
+  </div>
+</div>

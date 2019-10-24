@@ -1,0 +1,76 @@
+<div class="chatBotHeader">
+  Bin 
+</div>
+
+<div class="chatBotContainer">
+  <div *ngFor="let msg of messages">
+    <div [ngClass]="{
+      msgContainer_bot: msg.bot,
+      msgContainer_user: !msg.bot
+    }">
+      <span *ngIf="!msg.same.prev" [ngClass]="{
+        msgTail_bot: msg.bot,
+        msgTail_user: !msg.bot
+      }"></span>
+      <div [ngClass]="{
+        msgInnerContainer_bot: msg.bot,
+        msgInnerContainer_user: !msg.bot,
+        msgInnerContainer_BLBR: !msg.same.next,
+        msgInnerContainer_TL: !msg.same.prev && !msg.bot,
+        msgInnerContainer_TR: !msg.same.prev && msg.bot
+      }">
+        <span *ngIf="msg.type=='text'">{{msg.data.text}}</span>
+        <span *ngIf="msg.type=='option'">
+          {{msg.data.text}}
+
+          <div *ngFor="let optn of msg.data.option">
+            <div (click)="selectOption(msg,optn.optnId)" class="radio-outer-container">
+              <div class="radio-container">
+                <div class="radio-outer-circle" 
+                  [ngClass]="{
+                    'radio-outer-selected-color': msg.data.selected == optn.optnId,
+                    'radio-outer-correct-color': false,
+                    'radio-outer-incorrect-color':false,
+                    'radio-outer-disabled-color': false
+                  }">
+                </div>
+                
+                <div class="radio-inner-circle radio-inner-default-color" 
+                  [ngClass]="{
+                    'radio-inner-selected-color': msg.data.selected == optn.optnId,
+                    'radio-inner-correct-color': false,
+                    'radio-inner-incorrect-color': false
+                  }">
+                </div>
+              </div>
+              <div class="radio-content">
+                <span class="wordwrap"
+                  [ngClass]="{
+                    'radio-content-correct-color': false,
+                    'radio-content-incorrect-color': false,
+                    'radio-content-disabled-color': false
+                  }">
+                  {{optn.text}}
+                </span>
+              </div>
+            </div>
+          </div>
+          
+        </span>
+        <span *ngIf="msg.type=='Btn'">
+          <button mat-raised-button *ngIf="!msg.data.confirmed" (click)="confirmSelection(msg)">{{msg.data.btnText}}</button>
+          {{msg.data.text}}
+        </span>
+        <span *ngIf="msg.type=='QR_code'">
+          {{msg.data.text}}
+          <br/>
+          <bin-chat-qrcode [qrlink]="msg.data.link"></bin-chat-qrcode>
+  
+        </span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<button mat-raised-button (click)="test()">test</button>

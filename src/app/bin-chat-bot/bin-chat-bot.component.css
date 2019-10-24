@@ -1,0 +1,153 @@
+.chatBotContainer{
+    background: transparent;
+    font-size: 2em;
+}
+
+.msgContainer_bot, .msgContainer_user{
+    padding: 0 25px 5px 25px;
+    color: black;
+    position: relative;
+}
+
+.msgContainer_user {
+    text-align: right;
+}
+
+.msgTail_bot, .msgTail_user {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    position: absolute;
+}
+
+.msgTail_bot {
+    border-width: 0 15px 15px 0;
+    border-color: transparent lightblue transparent transparent;
+    transform: translate(calc(1px - 100%), 0);
+}
+
+.msgTail_user {
+    border-width: 15px 15px 0 0;
+    border-color: lightgreen transparent transparent transparent;
+    right: 0;
+    transform: translate(calc(-1px + 100% - 25px),0)
+}
+
+.msgInnerContainer_bot, .msgInnerContainer_user {
+    padding: 15px 25px;
+    width: 80%;
+    display: inline-block;
+    text-align: left;
+}
+
+.msgInnerContainer_bot {
+    background-color: lightblue;
+}
+
+.msgInnerContainer_user {
+    background-color: lightgreen;
+}
+
+.msgInnerContainer_TL {
+    border-top-left-radius: 15px;
+}
+
+.msgInnerContainer_TR {
+    border-top-right-radius: 15px;
+}
+
+.msgInnerContainer_BLBR {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.radio-outer-container {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.radio-content {
+    font-family: Roboto,"Helvetica Neue",sans-serif;
+    display: inline-block;
+    order: 0;
+    line-height: inherit;
+    padding-left: 16px;
+    padding-right: 0;
+    font-weight: 700;
+}
+
+.radio-container{
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.radio-outer-circle{
+    box-sizing: border-box;
+    height: 40px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: border-color ease 280ms;
+    width: 40px;
+    border-width: 4px;
+    border-style: solid;
+    border-radius: 50%;
+    border-color: rgba(0,0,0,.54);
+}
+
+.radio-inner-circle {
+    border-radius: 50%;
+    box-sizing: border-box;
+    height: 40px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: transform ease 280ms,background-color ease 280ms;
+    width: 40px;
+    transform: scale(.5);
+}
+
+.radio-outer-selected-color{
+    border-color: black;
+}
+
+.radio-inner-selected-color{
+    background-color: black; 
+}
+
+.radio-outer-correct-color{
+    border-color: lime;
+}
+
+.radio-inner-correct-color{
+    background-color: lime; 
+}
+
+.radio-outer-incorrect-color{
+    border-color: red;
+}
+
+.radio-inner-incorrect-color{
+    background-color: red; 
+}
+
+.wordwrap {
+    width: 100%;
+    white-space: normal;
+}
+
+.qrOuterContainer {
+    width: 100%;
+    text-align: center;
+}
+
+.qrwidth {
+    display: inline-block;
+    width: 50%;
+}

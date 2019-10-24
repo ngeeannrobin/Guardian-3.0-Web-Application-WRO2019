@@ -1,0 +1,30 @@
+.formstyle, .reglabel {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.reglabel {
+    padding-bottom: 2.5vh;
+}
+
+.txtBox {
+    width: 100%;
+}
+
+.reg {
+    padding-top: 35vh;
+}
+
+.btnreg {
+    position: absolute;
+    right: 0;
+    margin: auto;
+}
+
+/deep/ body {
+    background-color: #1CFFE4;
+    color: black;
+}

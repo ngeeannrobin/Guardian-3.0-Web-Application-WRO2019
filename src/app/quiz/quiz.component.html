@@ -1,0 +1,66 @@
+<div class="quizcontainer" *ngIf="selectedDifficulty!=null">
+  <div class="dot top left"></div>
+  <div class="dot top right"></div>
+  <div class="dot bot right"></div>
+  <div class="dot bot left"></div>
+  <div *ngIf="selectedDifficulty!=null" class="quiz">
+    <h2 class="qnStyle">{{randomQn.text}}</h2>
+    <div *ngFor="let optnId of optnIdArray" class="btn">
+      <label class="radio-label" (click)="select(optnId)">
+        <div class="radio-container">
+          <div class="radio-outer-circle" 
+            [ngClass]="{
+              'radio-outer-selected-color': selectedOptn==optnId && !answered,
+              'radio-outer-correct-color': ((selectedOptn==optnId  && correct) || optnId==randomQn.correct) && answered,
+              'radio-outer-incorrect-color': selectedOptn==optnId && answered && !correct,
+              'radio-outer-disabled-color': selectedOptn!=optnId && answered && optnId!=randomQn.correct
+            }">
+          </div>
+
+          <div class="radio-inner-circle radio-inner-default-color" 
+            [ngClass]="{
+              'radio-inner-selected-color': selectedOptn==optnId,
+              'radio-inner-correct-color': selectedOptn==optnId && answered && correct,
+              'radio-inner-incorrect-color': selectedOptn==optnId && answered && !correct
+            }">
+          </div>
+        </div>
+        <div class="radio-content">
+          <span class="wordwrap"
+            [ngClass]="{
+              'radio-content-correct-color': ((selectedOptn==optnId  && correct) || optnId==randomQn.correct) && answered,
+              'radio-content-incorrect-color': selectedOptn==optnId && answered && !correct,
+              'radio-content-disabled-color': selectedOptn!=optnId && answered && optnId!=randomQn.correct
+            }">
+            {{randomQn.option[optnId]}}
+          </span>
+        </div>
+      </label>
+    </div>
+
+  </div>
+</div>
+<div *ngIf="answered" class="msg" (click)="showQR()">
+    <h4>{{message}}</h4>
+  </div>
+<div *ngIf="selectedDifficulty==null">
+  <h1 class="diffmsg">Select a difficulty!</h1>
+    <div class="buttonsContainer">
+      <div class="buttons">
+          <span *ngFor="let difficulty of difficultyArray">
+            <div class="button" (click)="selectDifficulty(difficulty)" 
+            [ngClass]="{'btnMargin': difficultyArray.indexOf(difficulty)>0}">
+              <div class="btnInner">
+                <h1 class="btnContent">{{diffDic[difficulty.split("_")[1]]}}</h1>
+              </div>
+              <div class="btnInner btnInner2">
+                <p class="btnContent">{{difficulty.split("_")[0]}} points</p>
+              </div>
+            </div>
+          </span>
+        </div>
+    </div>
+</div>
+<div *ngIf="selectedOptn!=null" class="botRight">
+    <button mat-raised-button (click)="continue()">Continue</button>
+</div>

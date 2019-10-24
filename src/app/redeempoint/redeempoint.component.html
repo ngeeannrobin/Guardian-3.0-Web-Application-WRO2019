@@ -1,0 +1,11 @@
+<h1>Hi {{username}}, you have {{userpoint}} points! Claim it now!</h1>
+
+<div>
+  <div *ngFor="let partner of partnerArray" class="partnerContainer">
+  <h2>{{partner}}</h2>
+  <p>{{partnerData[partner].desc}}</p>
+  <button mat-raised-button (click)="redeem(partner)" class="btnredeem">
+    Redeem (<strong>{{partnerData[partner].point}}</strong> points)
+  </button>
+  </div>
+</div>

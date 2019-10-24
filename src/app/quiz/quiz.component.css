@@ -1,0 +1,249 @@
+.quizcontainer {
+    border-radius: 20px;
+    border: 10px solid #B840A2;
+    padding: 40px;
+    position: relative;
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #B840A2;
+    position: absolute;
+}
+
+.top {
+    top: 10px;
+}
+
+.left {
+    left: 10px;
+}
+
+.bot {
+    bottom: 10px;
+}
+
+.right {
+    right: 10px;
+}
+
+
+.btn {
+    width: 100%;
+    padding-bottom: 1em;
+}
+
+.wordwrap {
+    width: 100%;
+    white-space: normal;
+}
+
+.quiz {
+    
+    margin-left: 2.5em;
+    margin-right: 2.5em;
+}
+
+.qnStyle {
+    font-size: 2em;
+}
+
+.botRight{
+    position: absolute;
+    bottom: 10vh;
+    right: 2vh;
+}
+
+.radio-container{
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.radio-outer-circle{
+    box-sizing: border-box;
+    height: 40px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: border-color ease 280ms;
+    width: 40px;
+    border-width: 4px;
+    border-style: solid;
+    border-radius: 50%;
+    border-color: rgba(28,255,228,.54);
+}
+
+.radio-inner-circle {
+    border-radius: 50%;
+    box-sizing: border-box;
+    height: 40px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: transform ease 280ms,background-color ease 280ms;
+    width: 40px;
+    transform: scale(.5);
+}
+
+.radio-label {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.radio-content {
+    font-family: Roboto,"Helvetica Neue",sans-serif;
+    display: inline-block;
+    order: 0;
+    line-height: inherit;
+    padding-left: 16px;
+    padding-right: 0;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.radio-outer-selected-color{
+    border-color: #1CFFE4;
+}
+
+.radio-inner-selected-color{
+    background-color: #1CFFE4; 
+}
+
+.radio-outer-correct-color{
+    border-color: lime;
+}
+
+.radio-inner-correct-color{
+    background-color: lime; 
+}
+
+.radio-content-correct-color{
+    color: lime;
+    font-weight: 900;
+}
+
+.radio-outer-incorrect-color{
+    border-color: red;
+}
+
+.radio-inner-incorrect-color{
+    background-color: red; 
+}
+
+.radio-content-incorrect-color{
+    color: red;
+}
+
+.radio-outer-disabled-color{
+    border-color: rgba(28,255,228,.38);
+}
+
+.radio-content-disabled-color{
+    color: rgba(28,255,228,.38);
+}
+
+.botRight2{
+    position: absolute;
+    bottom: 0;
+    right: 24px;
+}
+
+.msgBox {
+    margin-top: 10px;
+    margin-right: 20%;
+    color: red;
+}
+
+.msg {
+    /* background-color: white; */
+    font-size: 1.5em;
+    padding-left: 50px;
+    padding-right: 100px;
+}
+
+.button {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #00FFDF;
+    border: 5px solid #BE3FA6;
+    
+    display: inline-block;
+
+    position: relative;
+}
+
+h1.diffmsg{
+    font-size: 3em;
+    text-align: center;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.buttonsContainer{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+
+.buttons{
+
+    width: auto;
+    text-align: center;
+}
+
+h1.btnContent{
+    margin: 0;
+    font-size: 2.5em;
+}
+
+p.btnContent{
+    margin-top: 2.5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-weight: bold;
+}
+
+.btnMargin{
+    margin-left: 5%;
+}
+
+.btnInner{
+    color: #F10CE1;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.btnInner2{
+    top: 50%;
+    transform: translate(-50%,25%);
+}
+
+.qrcontainer{
+    text-align: center;
+}
+
+.qrCodeInner {
+    display: inline-block;
+
+    background-color: white;
+}
+
+.fullWidth {
+    width: 100%;
+}

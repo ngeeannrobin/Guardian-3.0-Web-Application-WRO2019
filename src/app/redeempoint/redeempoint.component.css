@@ -1,0 +1,35 @@
+/deep/ body {
+    background-color: #1CFFE4;
+    color: black;
+}
+
+
+/deep/ .footer {
+    visibility: hidden;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.partnerContainer{
+    background-color: #7AFFED;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    padding-bottom: 60px;
+}
+
+.btnredeem {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 10px;
+}
