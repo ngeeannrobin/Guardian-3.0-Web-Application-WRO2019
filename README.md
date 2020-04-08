@@ -6,7 +6,12 @@
 
 # Project information
 
-This application, along with several other programs, was used to showcase a Gamified User-friendly Automated Rubbish Disposing Instrument *Amazing Name* (GUARDIAN) system. The project was supported by Overflow SIG at Ngee Ann Polytechnic. The project team consists of myself and two other members.
+This application, along with several other programs, was used to showcase a **Gamified User-friendly Automated Rubbish Disposing Instrument *Amazing Name* (GUARDIAN)** system. The project was supported by Overflow SIG at Ngee Ann Polytechnic and was used at three events:
+- National Robotics Compeition (Singapore), 1st place
+- World Robot Olympiad (Hungary), 11th place
+- Ngee Ann Polytechnic Open House 2020
+
+The project team consists of myself, two other members, and a supervisor.
 
 GUARDIAN is a system that aims to educate the general public on recycling through gamification (which is what this web application is). It also has a physical component, a trash can, which uses machine learning to sort the various types of discarded items by material. At the time of presentation, it is able to correctly sort between metal and plastic. 
 
